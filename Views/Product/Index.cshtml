@@ -1,15 +1,9 @@
+@{
+    Layout = "_Layout";
+}
 @model List<StoreWeb.Models.Product>
 
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
+<>
     @foreach (var product in Model)
     {
         <div>
@@ -18,7 +12,3 @@
             <a href="/Product/Get/@product.ProductId">Details</a>
         </div>
     }
-
-</body>
-
-</html>
