@@ -3,6 +3,12 @@
 }
 @model List<StoreWeb.Models.Product>
 
+@section Footer {
+    <div>This is a Footer only in Index </div>
+}
+@section Header {
+    <div>only for Index, Header</div>
+}
 <>
     @foreach (var product in Model)
     {

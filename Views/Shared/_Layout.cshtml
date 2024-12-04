@@ -8,12 +8,15 @@
 <body>
     <header>
         Store App: Header
-        <main>
-            @RenderBody()
-        </main>
-        <footer>
-            Store App:App Footer
-        </footer>
+        @RenderSection("Header", false)
     </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        Store App:App Footer
+        @RenderSection("Footer", false)
+    </footer>
+    @await RenderSectionAsync("Scripts", required:false)
 </body>
 </html>
