@@ -1,7 +1,9 @@
 @{
-    Layout = "_Layout";
+    Layout = null;
+    // _Layout.cshtml kullanılmıyor. null yapmamızın nedeni _ViewStart.cshtml dosyasında her belge için, Layout = "_Layout"; tanımlanmıştır.
 }
-@model List<StoreWeb.Models.Product>
+
+@model List<Product>
 
 @section Footer {
     <div>This is a Footer only in Index </div>
