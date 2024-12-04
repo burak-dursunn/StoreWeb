@@ -35,6 +35,7 @@ namespace StoreWeb.Controllers
         {
             Product? product = _context.Products.Find(id);
             // Product? product = _context.Products.FirstOrDefault(p => p.ProductId == id);
+            // Product? prroduct = _context.Products.First(p => p.productId == id);
 
             if (product == null)
             {
