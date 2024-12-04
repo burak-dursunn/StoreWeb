@@ -13,7 +13,7 @@ namespace StoreWeb.Models
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             
-            base.OnModelCreating(modelBuilder);;
+            base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Product>().HasData(
                 new Product() { ProductId = 1, ProductName = "Computer", Price = 25450.00 },
                 new Product() { ProductId = 4, ProductName = "Monitor", Price = 11600.00 },
