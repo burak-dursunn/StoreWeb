@@ -9,7 +9,7 @@ namespace StoreWeb.Controllers
         private readonly RepositoryContext _context; //
         public ProductController(RepositoryContext context) //
         {
-            _context = context; // Hepsi birlikte Dependency Injection'ı olulşturur. DI
+        _context = context; // Hepsi birlikte Dependency Injection'ı olulşturur. DI
         }
 
         /* 
@@ -22,6 +22,7 @@ namespace StoreWeb.Controllers
         .Options); 
         **********************************
         // Kodlarını yazıp RepositoryContext'i oluşturup, işmizi bir hayli uzatmış olacaktık.
+        // Bu Dependency Injection sayesinde, RepositoryContext'i oluşturup, işimizi kolaylaştırmış olduk.
         */
 
         public IActionResult Index()
