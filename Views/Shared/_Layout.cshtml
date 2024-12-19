@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
     <header>
-        Store App: Header
+        Header
         @RenderSection("Header", false)
+        <partial name="_Navbar" />
+        <hr>
     </header>
     <main>
         @RenderBody()
     </main>
     <footer>
-        Store App:App Footer
+        <br>
+        Footer
         @RenderSection("Footer", false)
+        <partial name="_Footer" />
     </footer>
-    @await RenderSectionAsync("Scripts", required:false)
+    @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>

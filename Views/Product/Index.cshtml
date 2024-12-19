@@ -1,22 +1,5 @@
-@{
-    Layout = null;
-    // _Layout.cshtml kullanılmıyor. null yapmamızın nedeni _ViewStart.cshtml dosyasında her belge için, Layout = "_Layout"; tanımlanmıştır.
-}
-
 @model List<Product>
-
-@section Footer {
-    <div>This is a Footer only in Index </div>
-}
-@section Header {
-    <div>only for Index, Header</div>
-}
-<>
     @foreach (var product in Model)
     {
-        <div>
-            <h2>@product.ProductName</h2>
-            <p>Fiyat : @product.Price</p>
-            <a href="/Product/Get/@product.ProductId">Details</a>
-        </div>
+        <partial name = "_ProductCard" model="@product"/>
     }
